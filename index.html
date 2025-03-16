@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>AppInventorGamePage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container label {
+            margin-top: 10px;
+            color: #007bff;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>App Inventor Game Page</h1>
+    </div>
+    <div class="container">
+        <label><b>用户名</b></label>
+        <input type="text" id="username" placeholder="请输入用户名" required>
+    
+        <label><b>密码</b></label>
+        <input type="text" id="password" placeholder="请输入密码" required>
+    
+        <button type="button" id="LoginButton">登录</button>
+    </div>
+    <script>
+        document.getElementById("LoginButton").addEventListener("click", function() {
+            if ((document.querySelector("username").value == "Admin") && (document.querySelector("password").value == "AppInventor2")) {
+                alert("登录成功");
+                window.location.href = "https://fhz1206.github.io/fhz-appinventor.github.io/all_code.html";
+            } else {
+                alert("登录失败");
+        });
+    </script>
+</body>
+</html>
